@@ -68,8 +68,8 @@
         color: var(--secondary-color);
       }
       h4 {
-       font-size: 3.5rem;
-       font-family: "Dancing Script", cursive;
+        font-size: 3.5rem;
+        font-family: "Dancing Script", cursive;
       }
       p {
         margin-bottom: 15px;
@@ -103,24 +103,25 @@
         background-color: var(--primary-color);
       }
 
-      /* Music Player */
+      /* Music Player - Diperbaiki */
       .music-player {
         position: fixed;
-        bottom: 10px;
-        left: 10px;
+        bottom: 20px;
+        left: 20px;
         z-index: 1000;
         background-color: var(--light-color);
         border-radius: 50px;
-        padding: 10px 20px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        padding: 12px 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: 12px;
+        border: 2px solid var(--primary-color);
       }
 
       .music-btn {
-        width: 40px;
-        height: 40px;
+        width: 45px;
+        height: 45px;
         border-radius: 50%;
         background-color: var(--primary-color);
         color: white;
@@ -129,6 +130,7 @@
         justify-content: center;
         cursor: pointer;
         transition: all 0.3s ease;
+        font-size: 1.2rem;
       }
 
       .music-btn:hover {
@@ -137,9 +139,19 @@
       }
 
       .music-info {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         color: var(--secondary-color);
-        max-width: 150px;
+        max-width: 120px;
+      }
+
+      .music-title {
+        font-weight: 600;
+        margin-bottom: 2px;
+      }
+
+      .music-status {
+        font-size: 0.7rem;
+        opacity: 0.8;
       }
 
       /* Floral Background Elements */
@@ -248,6 +260,7 @@
         justify-content: center;
         gap: 50px;
         flex-wrap: wrap;
+        align-items: center;
       }
 
       .couple-card {
@@ -258,15 +271,7 @@
         background-color: var(--accent-color);
         position: relative;
         z-index: 1;
-      }
-
-      .couple-img {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 20px;
-        border: 5px solid var(--primary-color);
+        text-align: center;
       }
 
       .couple-name {
@@ -281,11 +286,10 @@
       }
 
       .heart-icon {
-        font-size: 10rem;
+        font-size: 4rem;
         color: var(--primary-color);
-        margin: 30px 0;
+        margin: 20px 0;
         animation: heartbeat 1.5s infinite;
-        position: center;
       }
 
       @keyframes heartbeat {
@@ -466,6 +470,92 @@
         border-color: var(--primary-color);
       }
 
+      /* Guest Comments Section */
+      .comments {
+        background-color: var(--light-color);
+        text-align: center;
+      }
+
+      .comments-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .comments-list {
+        display: grid;
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .comment-card {
+        background-color: var(--accent-color);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: var(--shadow);
+        text-align: left;
+        border-left: 4px solid var(--primary-color);
+      }
+
+      .comment-header {
+        display: flex;
+        justify-content: between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .comment-name {
+        font-weight: 600;
+        color: var(--secondary-color);
+        font-size: 1.1rem;
+      }
+
+      .comment-status {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+
+      .comment-status.hadir {
+        background-color: #4caf50;
+      }
+
+      .comment-status.tidak-hadir {
+        background-color: #f44336;
+      }
+
+      .comment-phone {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+      }
+
+      .comment-message {
+        color: #333;
+        font-style: italic;
+        border-top: 1px solid #eee;
+        padding-top: 10px;
+        margin-top: 10px;
+      }
+
+      .comment-date {
+        font-size: 0.8rem;
+        color: #999;
+        text-align: right;
+        margin-top: 10px;
+      }
+
+      .no-comments {
+        text-align: center;
+        color: #666;
+        font-style: italic;
+        padding: 40px;
+        background-color: var(--accent-color);
+        border-radius: 15px;
+      }
+
       /* Footer */
       footer {
         background-color: var(--secondary-color);
@@ -505,16 +595,20 @@
           font-size: 2rem;
         }
 
+        h4 {
+          font-size: 2.5rem;
+        }
+
         .hero h1 {
           font-size: 3rem;
         }
 
         .countdown {
-          flex-wrap: wrap;
+          flex-wrap: wrap-reverse;
         }
 
         .countdown-item {
-          min-width: 80px;
+          min-width: 50px;
         }
 
         .countdown-number {
@@ -530,29 +624,74 @@
         }
 
         .music-player {
+          bottom: 15px;
+          left: 15px;
+          padding: 10px 15px;
+        }
+
+        .music-info {
+          max-width: 100px;
+        }
+
+        .heart-icon {
+          font-size: 3rem;
+          margin: 15px 0;
+        }
+
+        .couple-container {
+          gap: 20px;
+        }
+
+        .comment-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .music-player {
           bottom: 10px;
           left: 10px;
-          padding: 8px 15px;
+          padding: 8px 12px;
+        }
+
+        .music-btn {
+          width: 40px;
+          height: 40px;
+          font-size: 1rem;
         }
 
         .music-info {
           display: none;
         }
+
+        .heart-icon {
+          font-size: 2.5rem;
+        }
+
+        .comment-card {
+          padding: 15px;
+        }
       }
     </style>
   </head>
   <body>
-    <!-- Music Player -->
+    <!-- Music Player - Diperbaiki -->
     <div class="music-player">
       <div class="music-btn" id="playBtn">
         <i class="fas fa-play"></i>
       </div>
       <div class="music-info">
-        <div>Wedding Nasheed</div>
-        <div id="musicStatus">Klik untuk memutar</div>
+        <div class="music-title">Wedding Music</div>
+        <div class="music-status" id="musicStatus">Klik untuk memutar</div>
       </div>
-      <audio id="weddingMusic" loop preload="auto">
-        <!-- Ganti dengan link musik wedding nasheed yang Anda miliki -->
+      <!-- Ganti dengan link musik online yang valid -->
+      <audio id="weddingMusic" loop preload="metadata">
+        <source
+          src="d:\Data\Downloads\im_.adaa_musicaldown.com_1763913664.mp3"
+          type="audio/mpeg"
+        />
         <source
           src="d:\Data\Downloads\im_.adaa_musicaldown.com_1763913664.mp3"
           type="audio/mpeg"
@@ -567,7 +706,8 @@
       <div class="floral-bottom-left"></div>
       <div class="floral-bottom-right"></div>
       <div class="hero-content">
-        <h1>Anita & Angga Anggara</h1>
+        <h1>Undangan pernikahan</h1>
+        <h4>Anita <br>& <br>Angga Anggara</h4>
         <p>Kami akan menikah dalam:</p>
         <div class="countdown">
           <div class="countdown-item">
@@ -587,11 +727,9 @@
             <div class="countdown-label">Detik</div>
           </div>
         </div>
-        <a href="#rsvp" class="btn">Konfirmasi Kehadiran</a>
-      </div>
     </section>
 
-    <!-- Couple Section -->
+    <!-- Couple Section - Diperbaiki -->
     <section class="couple">
       <div class="container">
         <div class="floral-top-left"></div>
@@ -600,15 +738,22 @@
         <div class="floral-bottom-right"></div>
         <h2>Mempelai</h2>
         <div class="couple-container">
-            </div>
-            <h4 class="couple-name">Anita</h4> 
-            <p class="couple-desc">dari Bapak Iing suparman & Ibu Enong yuningsih</p>
-          </div></p>
+          <div class="couple-card">
+            <h4 class="couple-name">Anita</h4>
+            <p class="couple-desc">
+              Putri dari Bapak Iing Suparman & Ibu Enong Yuningsih
+            </p>
+          </div>
+
           <div class="heart-icon">
             <i class="fas fa-heart"></i>
           </div>
+
+          <div class="couple-card">
             <h4 class="couple-name">Angga Anggara</h4>
-            <p class="couple-desc">Putra dari Bapak usman(alm) & Ibu Ai sumiati(almh)</p>
+            <p class="couple-desc">
+              Putra dari Bapak Usman (Alm) & Ibu Ai Sumiati (Almh)
+            </p>
           </div>
         </div>
       </div>
@@ -631,9 +776,10 @@
             <p class="event-date">Minggu, 14 Desember 2025</p>
             <p class="event-time">Pukul 09.00 - 11.00 WIB</p>
             <p class="event-location">
-              Masjid Al-Mu'min<br />Jl. karangpawitan kp sukamulya id 44182, Garut
+              Masjid Al-Mu'min<br />Jl. Karangpawitan Kp Sukamulya ID 44182,
+              Garut
             </p>
-            <a href="https://maps.google.com" target="_blank" class="btn"
+            <a href="https://q.me-qr.com/UhKR5co3" target="_blank" class="btn"
               >Lihat Lokasi</a
             >
           </div>
@@ -644,11 +790,12 @@
             </div>
             <h3>Resepsi</h3>
             <p class="event-date">Minggu, 14 Desember 2025</p>
-            <p class="event-time">Pukul 11.00 s.d selesai</p>
+            <p class="event-time">Pukul 11.00 s.d Selesai</p>
             <p class="event-location">
-              Depan masjid al-mu'min<br />Jl. karangpawitan kp.sukamulya id 44182, Garut
+              Depan Masjid Al-Mu'min<br />Jl. Karangpawitan Kp. Sukamulya ID
+              44182, Garut
             </p>
-            <a href="https://maps.google.com" target="_blank" class="btn"
+            <a href="https://q.me-qr.com/UhKR5co3" target="_blank" class="btn"
               >Lihat Lokasi</a
             >
           </div>
@@ -704,8 +851,8 @@
 
             <div class="address-info">
               <p><strong>Alamat Pengiriman:</strong></p>
-              <p>Rt1/Rw11</p>
-              <p>Kp. sukamulya, kec. karangpawitan</p>
+              <p>RT 01/RW 11</p>
+              <p>Kp. Sukamulya, Kec. Karangpawitan</p>
               <p>Garut 44182</p>
               <p>Contact Person: Anita (081999096688)</p>
             </div>
@@ -760,10 +907,31 @@
             </div>
             <div class="form-group">
               <label for="message">Pesan untuk Mempelai</label>
-              <textarea id="message" class="form-control" rows="4"></textarea>
+              <textarea
+                id="message"
+                class="form-control"
+                rows="4"
+                placeholder="Tulis pesan dan doa untuk mempelai..."
+              ></textarea>
             </div>
             <button type="submit" class="btn">Kirim Konfirmasi</button>
           </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guest Comments Section -->
+    <section class="comments" id="comments">
+      <div class="container">
+        <div class="floral-top-left"></div>
+        <div class="floral-top-right"></div>
+        <div class="floral-bottom-left"></div>
+        <div class="floral-bottom-right"></div>
+        <h2>Ucapan & Konfirmasi Tamu</h2>
+        <div class="comments-container">
+          <div class="comments-list" id="commentsList">
+            <!-- Komentar akan ditampilkan di sini -->
+          </div>
         </div>
       </div>
     </section>
@@ -781,9 +949,9 @@
     </footer>
 
     <script>
-      // Countdown Timer
+      // Countdown Timer - Diperbaiki untuk tanggal 2025
       function updateCountdown() {
-        const weddingDate = new Date("June 15, 2024 08:00:00").getTime();
+        const weddingDate = new Date("December 14, 2025 09:00:00").getTime();
         const now = new Date().getTime();
         const distance = weddingDate - now;
 
@@ -810,18 +978,100 @@
         if (distance < 0) {
           clearInterval(countdownTimer);
           document.querySelector(".countdown").innerHTML =
-            "<h3>Acara Pernikahan Telah Berlangsung!</h3>";
+            "<h3>Acara Pernikahan Segera Berlangsung!</h3>";
         }
       }
 
       const countdownTimer = setInterval(updateCountdown, 1000);
       updateCountdown();
 
+      // Sistem Penyimpanan Data Tamu
+      let guestComments =
+        JSON.parse(localStorage.getItem("weddingGuestComments")) || [];
+
+      // Fungsi untuk menampilkan komentar
+      function displayComments() {
+        const commentsList = document.getElementById("commentsList");
+
+        if (guestComments.length === 0) {
+          commentsList.innerHTML = `
+            <div class="no-comments">
+              <i class="fas fa-comments" style="font-size: 3rem; margin-bottom: 15px; opacity: 0.5;"></i>
+              <p>Belum ada ucapan dan konfirmasi kehadiran.</p>
+              <p>Jadilah yang pertama memberikan ucapan!</p>
+            </div>
+          `;
+          return;
+        }
+
+        commentsList.innerHTML = guestComments
+          .map(
+            (comment) => `
+          <div class="comment-card">
+            <div class="comment-header">
+              <div class="comment-name">${comment.name}</div>
+              <div class="comment-status ${
+                comment.attendance === "yes" ? "hadir" : "tidak-hadir"
+              }">
+                ${comment.attendance === "yes" ? "Akan Hadir" : "Tidak Hadir"}
+              </div>
+            </div>
+            <div class="comment-phone">
+              <i class="fas fa-phone"></i> ${comment.phone}
+            </div>
+            <div class="comment-guests">
+              <i class="fas fa-users"></i> ${comment.guests} Tamu
+            </div>
+            ${
+              comment.message
+                ? `
+              <div class="comment-message">
+                <i class="fas fa-quote-left"></i> ${comment.message}
+              </div>
+            `
+                : ""
+            }
+            <div class="comment-date">
+              <i class="far fa-clock"></i> ${new Date(
+                comment.timestamp
+              ).toLocaleString("id-ID")}
+            </div>
+          </div>
+        `
+          )
+          .join("");
+      }
+
       // RSVP Form Submission
       document
         .getElementById("rsvpForm")
         .addEventListener("submit", function (e) {
           e.preventDefault();
+
+          const formData = {
+            name: document.getElementById("name").value,
+            phone: document.getElementById("phone").value,
+            guests: document.getElementById("guests").value,
+            attendance: document.getElementById("attendance").value,
+            message: document.getElementById("message").value,
+            timestamp: new Date().toISOString(),
+          };
+
+          // Simpan ke localStorage
+          guestComments.unshift(formData); // Tambah di awal array
+          localStorage.setItem(
+            "weddingGuestComments",
+            JSON.stringify(guestComments)
+          );
+
+          // Tampilkan komentar terbaru
+          displayComments();
+
+          // Scroll ke bagian komentar
+          document.getElementById("comments").scrollIntoView({
+            behavior: "smooth",
+          });
+
           alert(
             "Terima kasih! Konfirmasi kehadiran Anda telah berhasil dikirim."
           );
@@ -832,8 +1082,7 @@
       document
         .getElementById("copyAccount")
         .addEventListener("click", function () {
-          const accountNumber =
-            document.querySelector(".account-number").textContent;
+          const accountNumber = "1770007377481"; // Nomor rekening utama
           navigator.clipboard.writeText(accountNumber).then(() => {
             const originalText = this.textContent;
             this.textContent = "Tersalin!";
@@ -843,37 +1092,46 @@
           });
         });
 
-      // Music Player Functionality
+      // Music Player Functionality - DIEPERBAIKI
       const playBtn = document.getElementById("playBtn");
       const music = document.getElementById("weddingMusic");
       const musicStatus = document.getElementById("musicStatus");
       let isPlaying = false;
+      let userInteracted = false;
 
       // Fungsi untuk memutar musik
       function playMusic() {
-        music
-          .play()
-          .then(() => {
-            playBtn.innerHTML = '<i class="fas fa-pause"></i>';
-            musicStatus.textContent = "Wedding Nasheed - Diputar";
-            isPlaying = true;
-          })
-          .catch((error) => {
-            console.log("Autoplay dicegah:", error);
-            musicStatus.textContent = "Klik untuk memutar";
-          });
+        if (music.readyState >= 2) {
+          // Cek jika musik sudah siap
+          music
+            .play()
+            .then(() => {
+              playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+              musicStatus.textContent = "Sedang diputar";
+              isPlaying = true;
+            })
+            .catch((error) => {
+              console.log("Gagal memutar:", error);
+              musicStatus.textContent = "Klik untuk memutar";
+            });
+        } else {
+          musicStatus.textContent = "Memuat musik...";
+          // Coba lagi dalam 1 detik
+          setTimeout(playMusic, 1000);
+        }
       }
 
       // Fungsi untuk menjeda musik
       function pauseMusic() {
         music.pause();
         playBtn.innerHTML = '<i class="fas fa-play"></i>';
-        musicStatus.textContent = "Wedding Nasheed - Dijeda";
+        musicStatus.textContent = "Dijeda";
         isPlaying = false;
       }
 
       // Event listener untuk tombol play/pause
       playBtn.addEventListener("click", function () {
+        userInteracted = true;
         if (isPlaying) {
           pauseMusic();
         } else {
@@ -881,34 +1139,39 @@
         }
       });
 
-      // Coba memutar musik otomatis saat halaman dimuat
+      // Load musik saat halaman siap
       window.addEventListener("load", function () {
-        // Tunggu sebentar lalu coba play
-        setTimeout(() => {
-          playMusic();
-        }, 1000);
+        // Preload musik
+        music.load();
+        musicStatus.textContent = "Klik untuk memutar";
+        // Tampilkan komentar yang sudah ada
+        displayComments();
       });
-
-      // Event listener untuk interaksi pengguna (mengatasi autoplay restrictions)
-      document.addEventListener(
-        "click",
-        function () {
-          if (!isPlaying) {
-            playMusic();
-          }
-        },
-        { once: true }
-      );
 
       // Event listener untuk error audio
       music.addEventListener("error", function (e) {
         console.log("Error memuat audio:", e);
         musicStatus.textContent = "Error memuat musik";
+        playBtn.style.display = "none"; // Sembunyikan tombol jika error
       });
 
       // Event listener untuk saat audio berhasil dimuat
       music.addEventListener("canplaythrough", function () {
         console.log("Audio siap diputar");
+        musicStatus.textContent = "Klik untuk memutar";
+      });
+
+      // Event listener untuk interaksi pengguna pertama
+      document.addEventListener("click", function firstInteraction() {
+        userInteracted = true;
+        document.removeEventListener("click", firstInteraction);
+      });
+
+      // Coba autoplay setelah interaksi pengguna
+      document.addEventListener("click", function () {
+        if (!isPlaying && userInteracted) {
+          playMusic();
+        }
       });
     </script>
   </body>
